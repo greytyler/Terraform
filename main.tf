@@ -4,9 +4,9 @@
 # terraform plan -out=./plan    terraform apply ./plan
 
 resource "local_file" "tf_example" {
-    filename = "${path.module}/example.txt" 
+    filename = "${path.module}/example-${count.index}.txt" 
     content = "Hey this is updated content to write to the file"
-    #count = 3
+    count = 3
 }
 
 resource "local_sensitive_file" "tf_example2" {
