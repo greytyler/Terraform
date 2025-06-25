@@ -1,4 +1,6 @@
 # simple file resource
+#resource names must not be the same.
+
 resource "local_file" "tf_example" {
     filename = "${path.module}/example.txt" 
     content = "Hey this is updated content to write to the file"
