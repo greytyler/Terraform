@@ -13,3 +13,4 @@ resource "local_sensitive_file" "tf_sensitive" {
 
 #terraform destroy -target=local_sensitive_file.tf_sensitive 
 # terraform state -h .......see tf advenced state management commands
+#terraform refresh to check for state drift
