@@ -11,4 +11,5 @@ resource "local_sensitive_file" "tf_sensitive" {
     content = "#%Pass32427^-0"
 }
 
-#terraform destroy -target=local_sensitive_file.tf_sensitive
+#terraform destroy -target=local_sensitive_file.tf_sensitive 
+# terraform state -h .......see tf advenced state management commands
