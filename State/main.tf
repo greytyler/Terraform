@@ -10,3 +10,5 @@ resource "local_sensitive_file" "tf_sensitive" {
     filename = "${path.module}/sensitive.md" 
     content = "#%Pass32427^-0"
 }
+
+#terraform destroy -target=local_sensitive_file.tf_sensitive
