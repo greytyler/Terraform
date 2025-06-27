@@ -3,7 +3,7 @@ resource "local_file" "tf_file1" {
     content = "This is demo content"
 }
 resource "local_file" "tf_file2" {
-    filename = "${path.module}/fileum9.txt" 
+    filename = "${path.module}/fileum2.0.txt" 
     content = "This is demo content"
 }
 resource "local_sensitive_file" "tf_sensitive" {
