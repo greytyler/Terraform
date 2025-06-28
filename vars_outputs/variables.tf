@@ -15,6 +15,6 @@ variable "filename3" {
 }
 
 variable "count_num" {
-#   default = 1
+  default = 1
   type    = number
 }
