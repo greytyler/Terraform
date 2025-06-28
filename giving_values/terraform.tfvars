@@ -13,4 +13,4 @@ filename = "name_via-tfvars"
 #5 And lastly there's the default tf value in the variable.tf file
 
 # these are listed in order or decreasing precedence.
-# TF environment variables are best practice especially wen you want to pass sensitive data like passwords, tokens etc.
+# TF environment variables are best practice especially when you want to pass sensitive data like passwords, tokens etc.
