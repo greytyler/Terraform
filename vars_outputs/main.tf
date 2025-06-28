@@ -31,16 +31,35 @@ resource "local_file" "example4" {
 }
 
 resource "local_file" "service_configs" {
-  filename = "${local.base_path2}/server.sh"
+  filename = "${local.base_path2}/server1.sh"
   content  = <<EOF
     environment=${local.environment}
     port=3000
 EOF
-
 }
 
+resource "local_file" "service_configs" {
+  filename = "${local.base_path2}/server2.sh"
+  content  = <<EOF
+    environment=${local.environment}
+    port=3000
+EOF
+}
 
+resource "local_file" "service_configs" {
+  filename = "${local.base_path2}/server3.sh"
+  content  = <<EOF
+    environment=${local.environment}
+    port=3000
+EOF
+}
 
+# outputs
+
+output "filename1" {
+  value = local_file.service_configs.filename
+  sensitive = true
+}
 
 
 
