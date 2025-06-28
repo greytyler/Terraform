@@ -2,6 +2,8 @@
 
 filename = "name_via-tfvars"
 
+
+
 #1 -var or -var-file are used to pass variables via CLI eg. tf plan -var="filename=name_via-cli"
 
 #2 terraform.tfvars file. If filename is not terraform.tfvars, then implicitly tf plan -var-file="custom_name.tfvars"
