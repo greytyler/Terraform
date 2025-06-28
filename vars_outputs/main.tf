@@ -12,7 +12,7 @@ locals {
 
     environment = "dev" #dev, staging,  prod
     upper_case = upper(local.environment)
-    base_path2 = "${path.module}/configs/${local.upper_case}}"
+    base_path2 = "${path.module}/configs/${local.upper_case}"
 }
 
 resource "local_file" "example2" {
@@ -30,6 +30,14 @@ resource "local_file" "example4" {
   content  = "foo"
 }
 
+resource "local_file" "service_configs" {
+  filename = "${local.base_path2}/server.sh"
+  content  = <<EOF
+    environment=${local.environment}
+    port=3000
+EOF
+
+}
 
 
 
