@@ -14,10 +14,12 @@ resource "local_file" "example2" {
   filename = "${local.base_path}/example2.md"
   content  = "foo"
 }
+
 resource "local_file" "example3" {
   filename = "${local.base_path}/example3.md"
   content  = "foo"
 }
+
 resource "local_file" "example4" {
   filename = "${local.base_path}/example4.md"
   content  = "foo"
