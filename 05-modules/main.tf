@@ -18,4 +18,4 @@ output "file_path" {
 }
 
 #You tell Terraform to create two files with specific names and contents.
-Terraform will show you where those files are saved.
+#Terraform will show you where those files are saved.
