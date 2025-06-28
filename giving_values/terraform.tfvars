@@ -11,3 +11,6 @@ filename = "name_via-tfvars"
 #4 $env:TF_VAR_filename = "from-env-var"  Environment variable
 
 #5 And lastly there's the default tf value in the variable.tf file
+
+# these are listed in order or decreasing precedence.
+# TF environment variables are best practice especially when you want to pass sensitive data like passwords, tokens etc.
