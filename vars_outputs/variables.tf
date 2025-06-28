@@ -13,3 +13,8 @@ variable "filename3" {
     default = "example3"
     type = string
 }
+
+variable "count_num" {
+#   default = 1
+  type    = number
+}
