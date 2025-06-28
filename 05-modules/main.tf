@@ -16,3 +16,6 @@ output "file_path" {
         module.create_files.file2_path
     ] 
 }
+
+#You tell Terraform to create two files with specific names and contents.
+Terraform will show you where those files are saved.
