@@ -8,6 +8,11 @@ resource "local_file" "example1" {
 
 locals {
     base_path = "${path.module}/files"
+
+
+    environment = "dev" #dev, staging,  prod
+    upper_case = upper(local.environment)
+    base_path2 = "${path.module}/configs/${local.upper_case}}"
 }
 
 resource "local_file" "example2" {
