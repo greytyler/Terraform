@@ -2,7 +2,7 @@
 
 filename = "name_via-tfvars"
 
-
+api_key = "ETYR-1234-5678-9101-112131415161"
 
 #1 -var or -var-file are used to pass variables via CLI eg. tf plan -var="filename=name_via-cli"
 
