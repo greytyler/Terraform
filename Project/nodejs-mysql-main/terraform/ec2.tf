@@ -72,7 +72,7 @@ resource "aws_security_group" "tf_ec2_sg" {
     from_port   = 3000 # for nodejs app
     to_port     = 3000
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/24"]
+    cidr_blocks = ["0.0.0.0/0"] # allow all traffic from anywhere
   }
 
   egress {
