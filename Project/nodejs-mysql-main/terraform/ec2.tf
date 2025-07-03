@@ -10,7 +10,7 @@ resource "aws_instance" "tf_ec2_instance" {
   ami                         = "ami-020cba7c55df1f615" # ubuntu image
   instance_type               = "t2.micro"
   associate_public_ip_address = true
-  vpc_security_group_ids      = [aws_security_group.tf_ec2_sg.id]
+  vpc_security_group_ids      = [module.tf_module_ec2_sg.security_group_id] # security group module
   key_name                    = "tf_greykeypair"
   depends_on                  = [aws_s3_object.tf_s3_object]
   user_data  = <<-EOF
@@ -47,40 +47,67 @@ resource "aws_instance" "tf_ec2_instance" {
 }
 
 # security group
-resource "aws_security_group" "tf_ec2_sg" {
+# resource "aws_security_group" "tf_ec2_sg" {
 
-  name        = "nodejs-server-sg"
-  description = "Allow SSH and HTTP traffic"
-  vpc_id      = "vpc-04fa6265d1f9e96be" # default vpc
+#   name        = "nodejs-server-sg"
+#   description = "Allow SSH and HTTP traffic"
+#   vpc_id      = "vpc-04fa6265d1f9e96be" # default vpc
 
-  ingress {
-    description = "TLS from VPC"
-    from_port   = 443 # for nodejs app
-    to_port     = 443
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"] # allow all traffic from anywhere
-  }
-  ingress {
-    description = "SSH"
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-  ingress {
-    description = "TCP"
-    from_port   = 3000 # for nodejs app
-    to_port     = 3000
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"] # allow all traffic from anywhere
-  }
+#   ingress {
+#     description = "TLS from VPC"
+#     from_port   = 443 # for nodejs app
+#     to_port     = 443
+#     protocol    = "tcp"
+#     cidr_blocks = ["0.0.0.0/0"] # allow all traffic from anywhere
+#   }
+#   ingress {
+#     description = "SSH"
+#     from_port   = 22
+#     to_port     = 22
+#     protocol    = "tcp"
+#     cidr_blocks = ["0.0.0.0/0"]
+#   }
+#   ingress {
+#     description = "TCP"
+#     from_port   = 3000 # for nodejs app
+#     to_port     = 3000
+#     protocol    = "tcp"
+#     cidr_blocks = ["0.0.0.0/0"] # allow all traffic from anywhere
+#   }
 
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
+#   egress {
+#     from_port   = 0
+#     to_port     = 0
+#     protocol    = "-1"
+#     cidr_blocks = ["0.0.0.0/0"]
+#   }
+# }
+
+# ec2 security group module
+module "tf_module_ec2_sg" {
+  source = "terraform-aws-modules/security-group/aws"
+  version = "5.2.0"
+  vpc_id = "vpc-04fa6265d1f9e96be" # default vpc
+  name = "tf_module_ec2_sg"
+
+  ingress_with_cidr_blocks = [
+    {
+        from_port = 3000
+        to_port = 3000
+        protocol = "tcp"
+        cidr_blocks = "0.0.0.0/0"
+    },
+    {
+        rule = "https-443-tcp"
+        cidr_blocks = "0.0.0.0.0/0"
+    },
+    {
+        rule = "ssh-tcp"
+        cidr_blocks = "0.0.0.0/0"
+    }
+  ]
+
+  egress_rules = ["all-all"]
 
 }
 
