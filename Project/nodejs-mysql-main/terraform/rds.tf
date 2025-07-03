@@ -21,13 +21,13 @@ resource "aws_db_instance" "tf_rds_instance" {
     parameter_group_name = "default.mysql8.0"
     skip_final_snapshot = true
     publicly_accessible = true
-    #vpc_security_group_ids = []
+    vpc_security_group_ids = [aws_security_group.tf_rds_sg.id]
   
 }
 
 
 # security group
-resource "aws_security_group" "rds_sg" {
+resource "aws_security_group" "tf_rds_sg" {
 
   name        = "allow_mysql"
   description = "Allow mysql traffic"
