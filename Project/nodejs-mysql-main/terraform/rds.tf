@@ -46,7 +46,7 @@ resource "aws_security_group" "tf_rds_sg" {
     from_port   = 3306
     to_port     = 3306
     protocol    = "tcp"
-    security_groups = [aws_security_group.tf_ec2_sg.id] # allow allow all from ec2 security group
+    security_groups = [module.tf_module_ec2_sg.security_group_id] # allow allow all from ec2 security group
   }
 
   egress {

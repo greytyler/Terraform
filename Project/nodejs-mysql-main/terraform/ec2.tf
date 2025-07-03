@@ -99,7 +99,7 @@ module "tf_module_ec2_sg" {
     },
     {
         rule = "https-443-tcp"
-        cidr_blocks = "0.0.0.0.0/0"
+        cidr_blocks = "0.0.0.0/0"
     },
     {
         rule = "ssh-tcp"
