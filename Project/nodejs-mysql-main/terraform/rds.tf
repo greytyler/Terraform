@@ -57,3 +57,25 @@ resource "aws_security_group" "tf_rds_sg" {
   }
 
 }
+
+# local 
+locals {
+    rds_endpoint = element(split(":", aws_db_instance.tf_rds_instance.endpoint), 0)
+}
+
+# output
+output "rds_endpoint" {
+    value = local.rds_endpoint
+}
+
+output "rds_username" {
+    value = aws_db_instance.tf_rds_instance.username
+  
+}
+
+output "name" {
+    value = aws_db_instance.tf_rds_instance.db_name
+  
+}
+
+# connect to the db from the cmd: >mysql -h nodejs-rds-mysql.c4j82awmoz78.us-east-1.rds.amazonaws.com -u admin -p
