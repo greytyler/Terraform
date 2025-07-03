@@ -15,3 +15,5 @@ resource "aws_s3_object" "tf_s3_object" {
   source = "../public/images/${each.key}"
 
 }
+
+# have successfully provisioned , managed and automated infrastracture using Terraform

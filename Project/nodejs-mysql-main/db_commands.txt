@@ -11,3 +11,4 @@ CREATE TABLE users (
 INSERT INTO users (name, email) VALUES ('Dave Buster', 'daveb@example.com');
 INSERT INTO users (name, email) VALUES ('Jane Virgil', 'janev@example.com');
 INSERT INTO users (name, email) VALUES ('Cynthia Shama', 'cshamav@example.com');
+INSERT INTO users (name, email) VALUES ('Bill White', 'whitebill08@example.com');
