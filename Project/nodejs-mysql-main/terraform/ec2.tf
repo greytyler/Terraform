@@ -35,7 +35,7 @@ resource "aws_instance" "tf_ec2_instance" {
               sudo echo "DB_PASS=" | sudo tee -a .env
               echo "DB_NAME=" | sudo tee -a .env
               echo "TABLE_NAME=" | sudo tee -a .env
-              echo "PORT=" | sudo tee -a .env
+              echo "PORT=3000" | sudo tee -a .env
 
               # start server
               npm install

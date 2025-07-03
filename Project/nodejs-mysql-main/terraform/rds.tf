@@ -17,7 +17,7 @@ resource "aws_db_instance" "tf_rds_instance" {
     engine_version        = "8.0"
     instance_class      = "db.t3.micro"
     username             = "admin"
-    password             = "grey123"
+    password             = "grey_123"
     parameter_group_name = "default.mysql8.0"
     skip_final_snapshot = true
     publicly_accessible = true
@@ -38,7 +38,14 @@ resource "aws_security_group" "tf_rds_sg" {
     from_port   = 3306
     to_port     = 3306
     protocol    = "tcp"
-    cidr_blocks = ["165.16.167.152"] #local ip
+    cidr_blocks = ["165.16.166.152/32"] #local ip
+  }
+
+  ingress {
+    description = "TCP"
+    from_port   = 3306
+    to_port     = 3306
+    protocol    = "tcp"
     security_groups = [aws_security_group.tf_ec2_sg.id] # allow allow all from ec2 security group
   }
 
