@@ -84,4 +84,12 @@ resource "aws_security_group" "tf_ec2_sg" {
 
 }
 
+# output
+output "ec2public_ip" {
+  #value = aws_instance.tf_ec2_instance.public_ip
+  value = "ssh -i C:/Users/Thabo/.ssh/tf_greykeypair.pem ubuntu@${aws_instance.tf_ec2_instance.public_ip}"
+
+  
+}
+
 # ssh into my instance:  ssh -i C:\Users\Thabo\.ssh\tf_greykeypair.pem ubuntu@3.80.35.223
