@@ -119,4 +119,4 @@ output "ec2public_ip" {
   
 }
 
-# ssh into my instance:  ssh -i C:\Users\Thabo\.ssh\tf_greykeypair.pem ubuntu@54.144.246.143
+# ssh into my instance:  ssh -i C:\Users\Thabo\.ssh\tf_greykeypair.pem ubuntu@54.162.183.106

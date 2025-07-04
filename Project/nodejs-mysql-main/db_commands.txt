@@ -11,4 +11,10 @@ CREATE TABLE users (
 INSERT INTO users (name, email) VALUES ('Dave Buster', 'daveb@example.com');
 INSERT INTO users (name, email) VALUES ('Jane Virgil', 'janev@example.com');
 INSERT INTO users (name, email) VALUES ('Cynthia Shama', 'cshamav@example.com');
-INSERT INTO users (name, email) VALUES ('Bill White', 'whitebill08@example.com');
+INSERT INTO users (name, email) VALUES ('Bill White', 'whitebill02@example.com');
+INSERT INTO users (name, email) VALUES ('Thando Mashaba', 'Mashaba08@example.com');
+INSERT INTO users (name, email) VALUES ('Tshepo Hadebe', 'tshepohad33@example.com');
+INSERT INTO users (name, email) VALUES ('Amanda Fried', 'friedmandy@example.com');
+INSERT INTO users (name, email) VALUES ('Kelvin Songa', 'KaymanSongs04@example.com');
+INSERT INTO users (name, email) VALUES ('Ray', 'Johnson08@example.com');
+INSERT INTO users (name, email) VALUES ('kanye Tamara', 'TammyKay95@example.com');

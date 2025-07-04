@@ -48,3 +48,7 @@ body {
   background: linear-gradient(135deg, darkturquoise, indigo, white);
 }
   
+.shadow-xl {
+
+  background: url('images/icons8-amazon-web-services-64.png') no-repeat center center;
+}
