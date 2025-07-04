@@ -6,6 +6,15 @@ body {
     color: #333;
   }
   
+  main {
+    height:100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    background: url('images/icons8-amazon-web-services-64.png') no-repeat ;
+  }
+  
   .logo {
     display: flex;
     justify-content: center; /* Center horizontally */
@@ -49,6 +58,5 @@ body {
 }
   
 .shadow-xl {
-
-  background: url('images/icons8-amazon-web-services-64.png') no-repeat center center;
+  
 }

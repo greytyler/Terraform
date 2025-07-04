@@ -82,8 +82,9 @@ Before deploying, I ensured the following were set up:
 #### Provision resources and security groups
 
 ###### 🔐 Security & Access Control
-- sg-ec2: Allows inbound HTTP (port 3000) and SSH (port 22) access to the EC2 instance.
-- sg-rds: Restricts MySQL access (port 3306) to only the EC2 instance.
+- ###### sg-ec2: Allows inbound HTTP (port 3000) and SSH (port 22) access to the EC2 instance.
+- ##### sg-rds: Restricts MySQL access (port 3306) to only the EC2 instance.
+
 1️⃣ Initialize Terraform
     terraform init
 2️⃣ Review plan
