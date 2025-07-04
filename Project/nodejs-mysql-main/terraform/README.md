@@ -25,7 +25,7 @@ This project provisions a fully automated AWS cloud infrastructure using **Terra
    - An **S3 bucket** for file storage
    - Custom **security groups** with port-based restrictions
 3. The Node.js app connects securely to the RDS on **port 3306**.
-4. The app interacts with S3 for file upload/download.
+4. The app interacts with S3 for file upload/download
 5. Everything runs within the default **VPC** for isolation.
 
 ---
@@ -116,7 +116,7 @@ mysql -h nodejs-rds-mysql.c4j82awmoz78.us-east-1.rds.amazonaws.com -u admin -p
 
 
 #### Test App in Browser
-Visit: http://<ec2-public-ip>:3000
+Visit: http://144.246.143:3000
 ![DB_in_Browser](../screenshots/db-output.png)
 
 
@@ -129,3 +129,8 @@ terraform destroy
 - Modularizing Terraform code for reuse
 - Connecting Node.js to MySQL via secure SGs
 - Provisioning with Terraform from scratch
+
+ 
+
+
+<sub>Diagram concept inspired from @verma-kunal</sub>
