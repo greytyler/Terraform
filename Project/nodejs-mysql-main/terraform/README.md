@@ -79,14 +79,20 @@ Before deploying, I ensured the following were set up:
 
 ---
 
-#### Provision resources
+#### Provision resources and security groups
+
+###### 🔐 Security & Access Control
+- sg-ec2: Allows inbound HTTP (port 3000) and SSH (port 22) access to the EC2 instance.
+- sg-rds: Restricts MySQL access (port 3306) to only the EC2 instance.
 1️⃣ Initialize Terraform
     terraform init
 2️⃣ Review plan
    terraform plan
 3️⃣ Provision infrastracture
 terraform apply
-![Resources](./screenshots/rds-setup.png)
+
+![RDS resource](../screenshots/tf-resources.png)
+![Resources](../screenshots/rds-provisioned-light.png)
 
 ---
 
@@ -98,14 +104,19 @@ As soon as the EC2 instance is provisioned, a `user_data` script is executed to 
 #### SSH into my EC2 Instance
 ssh -i C:\Users\Thabo\.ssh\tf_greykeypair.pem ubuntu@54.162.183.106
 
+![Resources](../screenshots/ec2-server-run.png)
+
 
 #### Connect to MySQL (RDS) and add more data
 
 mysql -h nodejs-rds-mysql.c4j82awmoz78.us-east-1.rds.amazonaws.com -u admin -p
 
+![Mysql-connect](../screenshots/db-connect-add.png)
+
 
 #### Test App in Browser
 Visit: http://<ec2-public-ip>:3000
+![DB_in_Browser](../screenshots/db-output.png)
 
 
 
