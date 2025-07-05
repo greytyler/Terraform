@@ -130,7 +130,7 @@ terraform destroy
 - Connecting Node.js to MySQL via secure SGs
 - Provisioning with Terraform from scratch
 
- 
+ #### Read blog post [Here](https://greystack.hashnode.dev/how-i-built-a-fully-automated-aws-infrastructure-with-terraform-to-deploy-a-nodejs-app-free-tier-friendly)
 
 
 <sub>Diagram concept inspired from @verma-kunal</sub>
