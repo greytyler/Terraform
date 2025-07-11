@@ -122,7 +122,7 @@ Visit: http://54.144.246.143:3000
 
 
 #### Destroy Infrastructure
-terraform destroy
+terraform destro
 
 #### 🧠 What I Learned
 - Designing cloud infra with security-first approach
