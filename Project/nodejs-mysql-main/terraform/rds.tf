@@ -38,7 +38,7 @@ resource "aws_security_group" "tf_rds_sg" {
     from_port   = 3306
     to_port     = 3306
     protocol    = "tcp"
-    cidr_blocks = ["165.16.167.152/32"] #local ip
+    cidr_blocks = ["165.16.166.152/32"] #local ip
   }
 
   ingress {
