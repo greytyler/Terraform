@@ -73,7 +73,7 @@ output "rds_username" {
   
 }
 
-output "name" {
+output "db_name" {
     value = aws_db_instance.tf_rds_instance.db_name
   
 }
