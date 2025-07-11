@@ -38,7 +38,7 @@ resource "aws_security_group" "tf_rds_sg" {
     from_port   = 3306
     to_port     = 3306
     protocol    = "tcp"
-    cidr_blocks = ["165.16.166.152/32"] #local ip
+    cidr_blocks = ["165.16.167.152/32"] #local ip
   }
 
   ingress {
@@ -78,4 +78,4 @@ output "db_name" {
   
 }
 
-# connect to the db from the cmd: >mysql -h nodejs-rds-mysql.c4j82awmoz78.us-east-1.rds.amazonaws.com -u admin -p
+# connect to the db from the cmd: >mysql -h nodejs-rds-mysql.c4j82awmoz78.us-east-1.rds.amazonaws.com -u admin -p 
