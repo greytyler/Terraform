@@ -116,7 +116,7 @@ mysql -h nodejs-rds-mysql.c4j82awmoz78.us-east-1.rds.amazonaws.com -u admin -p
 
 
 #### Test App in Browser
-Visit: http://144.246.143:3000
+Visit: http://54.144.246.143:3000
 ![DB_in_Browser](../screenshots/db-output.png)
 
 
