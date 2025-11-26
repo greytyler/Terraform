@@ -1,2 +1,2 @@
 # Terraform
- my terraform iac learn projects
+ terraform iac learn projects
