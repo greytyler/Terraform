@@ -9,5 +9,5 @@ terraform {
 
 resource "local_file" "example1" {
   filename = "${path.module}/${var.filename}.txt"
-  content  = "demo quantero2"
+  content  = "demo quantero"
 }
