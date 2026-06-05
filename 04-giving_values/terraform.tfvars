@@ -3,7 +3,6 @@
 filename = "name_via-tfvars"
 filesaver = "name_savervars"
 statesaver = "state_name_saver"
-featuresaver = "state_feature_saver"
 check_env = "env_checlist"
 filenames_encrypt = "encrypt_names"
 
