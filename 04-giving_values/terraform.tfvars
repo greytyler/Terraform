@@ -5,7 +5,7 @@ filesaver = "name_savervars"
 statesaver = "state_name_saver"
 featuresaver = "state_feature_saver"
 check_env = "env_checlist"
-filenames_crypt = "crypt_names"
+filenames_encrypt = "encrypt_names"
 
 
 #1 -var or -var-file are used to pass variables via CLI eg. tf plan -var="filename=name_via-cli"
