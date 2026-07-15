@@ -3,7 +3,7 @@
 filename = "name_via-tfvars"
 filesaver = "name_savervars"
 check_env = "env_checlist"
-
+save_new = "new_fill_vars"
 
 
 #1 -var or -var-file are used to pass variables via CLI eg. tf plan -var="filename=name_via-cli"
