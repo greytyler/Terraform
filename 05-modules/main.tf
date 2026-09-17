@@ -7,7 +7,7 @@ module "create_files" {
     file1_content = "from file1"
 
     filename2 = "my_second_file.txt"
-    file2_content = "from file1"
+    file2_content = "from file2"
 }
 
 output "file_path" {
