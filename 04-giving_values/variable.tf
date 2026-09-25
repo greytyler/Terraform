@@ -2,6 +2,7 @@
 variable "filename"{
     type = string
     default = "default-value"
+    convars = "concurrent variables"
 }
 
 
