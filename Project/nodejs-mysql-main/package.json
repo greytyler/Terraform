@@ -4,7 +4,6 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "devrel": "node server2.js"
     "dev": "nodemon --env-file=.env server.js"
   },
   "author": "",
