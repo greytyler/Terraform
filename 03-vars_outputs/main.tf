@@ -3,8 +3,7 @@
 resource "local_file" "example1" {
   filename = "${path.module}/${var.filename1}.txt"
   content  = "This is demo content"
-  count = var.count_num1
-  rate = var.count_numrate
+  count = var.count_num
 }
 
 locals {
