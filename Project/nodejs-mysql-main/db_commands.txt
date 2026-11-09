@@ -18,4 +18,4 @@ INSERT INTO users (name, email) VALUES ('Amanda Fried', 'friedmandy@example.com'
 INSERT INTO users (name, email) VALUES ('Kelvin Songa', 'KaymanSongs04@example.com');
 INSERT INTO users (name, email) VALUES ('Ray', 'Johnson08@example.com');
 INSERT INTO users (name, email) VALUES ('kanye Tamara', 'TammyKay95@example.com');
-INSERT INTO users (name, email) VALUES ('Lui Sevens', sevens07lui@example.com');
+INSERT INTO users (name, email) VALUES ('Lui Sevens', 'Sevens07lui@example.com');
